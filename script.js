@@ -25,8 +25,8 @@ function dataUp(MTAFareData){
         
          };
         
-		//tells Google Visualization to create a line chart and give it to the
-	var ThisChart = new google.visualization.LineChart(document.getElementById('newChartDiv')); //I've created type of chart 
+		//tells Google Visualization to create a line chart 
+	var ThisChart = new google.visualization.LineChart(document.getElementById('newChartDiv')); 
 	ThisChart.draw(gDataTable,ChartOptions);
 	
 	
@@ -36,7 +36,7 @@ function dataUp(MTAFareData){
 function GoogleVizUp() {
 
 	console.log("I've put up Google!");
-	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1DevzsGfZKf83L-hwxCiTGIiNfcSfx-siHKImPKII&key=AIzaSyCgfAUYUUuX8vurL0WtKGYRGho11LEnsPI", dataUp, "json"); //I'm retrieving my the json 
+	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1DevzsGfZKf83L-hwxCiTGIiNfcSfx-siHKImPKII&key=AIzaSyCgfAUYUUuX8vurL0WtKGYRGho11LEnsPI", dataUp, "json"); //I'm retrieving my json data 
 	
 }	
 	
